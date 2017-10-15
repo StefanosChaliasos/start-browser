@@ -1,4 +1,5 @@
 /myfiles/*
+*bookmarks.json
 
 # .DS_Store
 *.DS_Store

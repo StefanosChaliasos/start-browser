@@ -1,5 +1,7 @@
 {"links": {
-    "Yahoo news": "https://www.yahoo.com/news/",
-    "Google": "https://www.google.com"
-    }
+	"Medium": "https://medium.com/",
+	"DZone": "https://dzone.com/",
+	"Hacker news": "https://news.ycombinator.com/news",
+	"Yahoo news": "https://www.yahoo.com/news/"
+	}
 }
