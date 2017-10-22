@@ -17,7 +17,7 @@ def parse_arguments():
 
 
 def parse_bookmarks():
-    with open('start-browser/bookmarks.json') as links_file:
+    with open('startbrowser/bookmarks.json') as links_file:
         return json.load(links_file)
 
 
