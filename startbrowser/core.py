@@ -2,10 +2,11 @@ import webbrowser
 import json
 import sys
 import argparse
+from collections import OrderedDict
 
 
 def parse_arguments():
-    if not len(sys.argv) > 1:               # check if an argument had given
+    if not len(sys.argv) > 1:  # Check if an argument had given
         return False
     parser = argparse.ArgumentParser()
     parser.add_argument('--browser', choices=[
@@ -18,14 +19,15 @@ def parse_arguments():
 
 def parse_bookmarks():
     with open('startbrowser/bookmarks.json') as links_file:
-        return json.load(links_file)
+        links = json.load(links_file, object_pairs_hook=OrderedDict)
+        return links
+        
 
 
 def open_browser():
     links = parse_bookmarks()
-
     browser_selection = parse_arguments()
-
+    
     for url in links["links"].values():
         if browser_selection:
             try:
